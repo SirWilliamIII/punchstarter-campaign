@@ -27,6 +27,11 @@ contract Campaign {
         minContribution = min;
     }
 
+    function contribute() public payable {
+        require(msg.value > minContribution);
+        approvers[msg.sender] = true;
+    }
+
     function createRequest(string description, uint value, address recipient) public restricted {
         Request memory newRequest = Request({
             description: description,
