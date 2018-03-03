@@ -7,6 +7,8 @@ yarn-error.log*
 
 .idea/
 
+ADDRESS
+
 # Runtime data
 pids
 *.pid
